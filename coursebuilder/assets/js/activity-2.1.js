@@ -30,9 +30,29 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
+    '<b>1.</b> Snubber diodes connect into the same locations where a motor connects.<br>',
 
-  '<table border="2"><tr><td><b>Search Tips:</b><p> <ul><li>When you do certain queries, Google presents information about these topics directly on the search results page.<li>You can distinguish the information in these panels from advertisements because advertisements are labeled as Ads. Also, when these panels appear, they are always the top box on the right-hand side.<li>Topics for which information panels appear include, but are not limited to, animals, famous people, landmarks, countries, movies, books, works of art, sports teams, and chemical elements.</ul> </tr></td></table><br>',
+    { questionType: 'multiple choice',
+      choices: [['True', true, 'Correct!  Always the same spots as the motor.  Just need to figure out which direction it connects.'],
+                ['False', false, 'Please try again.']]},
 
-  'Have you ever played the <a href="http://en.wikipedia.org/wiki/Six_degrees_of_separation#Kevin_Bacon_game" target="_blank">"Six Degrees of Separation"</a> game, where you try to get from one celebrity to another via co-stars in movies they have in common? Clicking only in the information panels on the right side of the screen, our search expert got from Mona Lisa to the Golden Gate Bridge in seven clicks. That is, she entered the query [Mona Lisa], clicked on something in the panel on the right side of the screen, then clicked on something else in the resulting screen, and so forth, and finally ended up at a page about the Golden Gate Bridge. How did she do it? Can you do it with fewer clicks? <p>Find your own "six degrees" chain using the panels on the right. Share your story in the <a href="LINK_TO_COURSE_FORUM" target="_blank">forum</a>.',
+    '<br><br><b>2.</b> The gray bar on a real diode represents the "bar" as shown on a schematic diagram (which is the cathode).  That bar connects to motor\'s power supply.<br>',
+
+    { questionType: 'multiple choice',
+      choices: [['True', true, 'Correct!  The gray bar is the "bar".'],
+                ['False', false, 'Please try again.']]},
+
+
+    '<br><br><b>3.</b> For small currents you "could" use and LED as a snubber diode.<br>',
+
+    { questionType: 'multiple choice',
+      choices: [['True', true, 'Correct!  You "could".  An LED is a diode, but not really a recommended snubber diode.  If the inductive spike was too big it\'d blown the LED. :)'],
+                ['False', false, 'Please try again.  It\'s possible.  I never ask if it was recommended.  I just ask if it was possible. :)']]},
+
+    '<br><br><b>4.</b> Pin 9 on a Darlington (labelled COM) is a snubber diode.  If you have 7 LEDs on the Darlington chip (ULN2003) you need to connect COM to the LED\'s power supply rail.<br>',
+
+    { questionType: 'multiple choice',
+      choices: [['True', false, 'Please try again.  Admittedly it wouldn\'t hurt anything, but LEDs don\'t have inductive kick so you don\'t need to bother.  To be honest, I usually DO connect it even though I know it\'s unnecessary for LEDs.'],
+                ['False', true, 'Correct! LEDs don\'t have inductive kick, so you don\'t need to bother with inductive kick protection.  To be honest, I usually DO connect it even though I know it\'s unnecessary for LEDs.']]},
 
 ];

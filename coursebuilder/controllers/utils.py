@@ -492,9 +492,10 @@ class RegisterHandler(BaseHandler):
             name = profile.nick_name
         else:
             name = self.request.get('form01')
+            rose_username = self.request.get('form02')
 
         Student.add_new_student_for_current_user(
-            name, transforms.dumps(self.request.POST.items()))
+            name, rose_username, transforms.dumps(self.request.POST.items()))
         # Render registration confirmation page
         self.redirect('/course#registration_confirmation')
 

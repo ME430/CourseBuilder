@@ -31,8 +31,27 @@
 
 var activity = [
 
-  '<table border="2"><tr><td> <b>Search Tips:</b><p> <ul><li>In the left panel of the search results page, you can filter results by different categories.<li>These categories include blogs, discussions, recipes, patents, books, 3D models, scholarly sources, and legal documents.<li>The left panel does not appear on tablet computers (iPads and Android devices). </tr></td></table>',
+  '<b>1.</b> Briefly discribe why and how we will use transistors in this course',
 
-  'In the video, Dan explored results in different media for the word [cats]. What do you love? Compare the information you find by searching for a topic of your choice and clicking on all the different media options. Share your story in the <a href="LINK_TO_COURSE_FORUM" target="_blank">forum</a>.',
+  { questionType: 'freetext',
+    correctAnswerRegex: /current/i,
+    correctAnswerOutput: 'Indeed.  The microcontroller will only provide so much current, so we need a transistor to serve as an electrically controlled switch for loads that need more current (or higher voltages).',
+    incorrectAnswerOutput: "That works, but ideally somewhere you'd say the word 'current'. :)",
+    showAnswerOutput: 'The microcontroller will only provide so much current, so we need a transistor to serve as an electrically controlled switch for loads that need more current (or higher voltages)'},
+
+    '<br><br><b>2.</b> A transistor that is controlled by current is called a <br>',
+    
+  { questionType: 'multiple choice',
+    choices: [['BJT', true, 'Correct!  Bipolar Junction Transistors turn on and off via current.'],
+              ['MOSFET', false, 'Please try again. MOSFETs are voltage controlled.'],
+              ['H-Bridge', false, 'Please try again. ']]},
+
+  '<br><br><b>3.</b> A transistor that is controlled by voltage is called a <br>',
+  
+  { questionType: 'multiple choice',
+    choices: [['BJT', false, 'Please try again. BJTs are current controlled.'],
+              ['MOSFET', true, 'Correct!  Metal Oxide Semiconductor Field Effect Transistors turn on and off via voltage.'],
+              ['H-Bridge', false, 'Please try again. ']]},
 
 ];
+

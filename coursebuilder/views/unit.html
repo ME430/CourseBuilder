@@ -2,7 +2,7 @@
 
 {% block subtitle %}
   {# I18N: Title of the webpage. #}
-  - {{ gettext('Unit') }} {{ unit.index }} - {{ unit.title }}
+  {{ unit.title }}
 {% endblock subtitle %}
 
 {% block top_content %}
@@ -29,19 +29,19 @@
   {% endif %}
   <ul class="gcb-breadcrumb">
     {# I18N: Navigation breadcrumb. #}
-    <li><a href="course">{{ gettext('Course') }}</a></li>
+    <li><a href="course">Videos</a></li>
     <li><a href="unit?unit={{ unit.unit_id }}">
       {# I18N: Navigation breadcrumb. #}
-      {{ gettext('Unit') }} {{ unit.index }}</a></li>
+      {{ unit.title }}</a></li>
     {% if lesson %}
       {# I18N: Navigation breadcrumb. #}
-      <li>{{ gettext('Lesson') }} {{ lesson.index }}</li>
+      <li>{{ lesson.title }}</li>
     {% endif %}
   </ul>
   <div>
     <h1 class="gcb-unit-header">
       {# I18N: Header text for a unit page. #}
-      {{ gettext('Unit %(id)s - %(title)s', id=unit.index, title=unit.title) }}
+      {{ gettext('%(title)s', title=unit.title) }}
     </h1>
   </div>
 
@@ -80,7 +80,7 @@
                   {% if lesson.notes %}
                   <a role="button" class="gcb-button" id="lessonNotesLink" href="{{ lesson.notes }}" target="_blank">
                     {# I18N: Link to a text version of a lesson video. #}
-                    {{ gettext('Text Version') }}
+                    Slides
                   </a>
                   {% endif %}
                 </p>

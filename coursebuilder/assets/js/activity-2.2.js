@@ -30,25 +30,28 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
+    '<b>1.</b> Decoupling capacitors always connect between power and ground.<br>',
 
-  '<table border="2"><tr><td> <b>Search Tips:</b><p> <ul><li>Sometimes search results offer information that suggests a better or additional search.<li>Use [define] in the search box to identify the meaning of words.<li>Click on Search Tools in the left panel, then Dictionary to define words that do not appear in traditional dictionaries.</ul> </tr></td></table>',
+    { questionType: 'multiple choice',
+      choices: [['True', true, 'Correct!  They are pretty simple.'],
+                ['False', false, 'Please try again.']]},
 
-  '<b>1.</b> You are a cosmetologist and business owner, and have been asked by a few clients if you are going to offer those fish that clean people\'s feet. To learn more, you search for [fish clean feet]. <p><a href="assets/img/Image2.2.1.png" target="_blank"><img src="assets/img/Image2.2.1.png" width="618" height="504" alt="search results for [fish clean feet]" title="search results for [fish clean feet]"></a><p> Do these results look helpful for making business decisions?',
+    '<br><br><b>2.</b> The large electrolytic capacitors we use near motors are <b>directional</b> and <b>MUST</b> be connected in a certain direction.<br>',
 
-  { questionType: 'multiple choice',
-    choices: [['Yes', false, 'Your answer is incorrect. Please try again.'],
-              ['No', true, 'Your answer is correct! These results appear to be casual information; the kind that is shared friend-to-friend. For business decisions, you probably should consider more professional or formal sources of information about this trend.']]},
+    { questionType: 'multiple choice',
+      choices: [['True', true, 'Correct!  They have a negative strip on one side that must go to ground.'],
+                ['False', false, 'Please try again.']]},
 
-  '<p><b>2.</b> You modify your search to give you more precise information. What are some more business-oriented terms suggested by these results?</p>',
+    '<br><br><b>3.</b> The small ceramic capacitors we use near the PIC is <b>directional</b> and <b>MUST</b> be connected in a certain direction.<br>',
 
-  { questionType: 'freetext',
-    showAnswerPrompt: 'Show Answer',
-    showAnswerOutput: 'Possible search terms based on the results above could be [fish pedicure], [doctor fish], or [fish spa].' },
+    { questionType: 'multiple choice',
+      choices: [['True', false, 'Please try again.'],
+                ['False', true, 'Correct!  They are reversible and can be connected either way.']]},
 
-  '<p><b>3.</b> While you are researching more about fish pedicures and doctor fish (which go by the scientific name of Garra rufa), you discover that the Centers for Disease Control says "Garra rufa are native to the Middle East, where they have been used as a medical treatment for individuals with skin diseases, like psoriasis." You want to know what psoriasis is. What would your search look like?</p>',
+    '<br><br><b>4.</b> I\'ve watched Old School and got the Vince Vaughn earmuffs reference.<br>',
 
-  { questionType: 'freetext',
-    showAnswerPrompt: 'Show Answer',
-    showAnswerOutput: 'Any of the following would work: [define psoriasis], [define:psoriasis], [define: psoriasis].' },
+    { questionType: 'multiple choice',
+      choices: [['True', true, 'Love that movie.  As you get older you will stop finding movies like that funny so watch them now. :P'],
+                ['False', false, 'You\'re missing out.  Go rent it on Netflix instead of finishing this lecture.  Obviously finish the lecture later. :)']]},
 
 ];

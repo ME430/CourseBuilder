@@ -2,7 +2,7 @@
 
 {% block subtitle %}
   {# I18N: Title of the webpage. #}
-  - {{ gettext('Unit') }} {{ unit.index }} - {{ unit.title }}
+  {{ unit.title }}
 {% endblock subtitle %}
 
 {% block top_content %}
@@ -22,23 +22,23 @@
 <div id="gcb-main">
   <ul class="gcb-breadcrumb">
     {# I18N: Navigation breadcrumb. #}
-    <li><a href="course">{{ gettext('Course') }}</a></li>
+    <li><a href="course">Videos</a></li>
     <li>
       <a href="unit?unit={{ unit.unit_id }}">
         {# I18N: Navigation breadcrumb. #}
-        {{ gettext('Unit') }} {{ unit.index }}</a></li>
+        {{ unit.title }}</a></li>
     {% if lesson %}
       <li>
         <a href="unit?unit={{ unit.unit_id }}&lesson={{ lesson.lesson_id }}">
           {# I18N: Navigation breadcrumb. #}
-          {{ gettext('Lesson') }} {{ lesson.index }}</a></li>
+          {{ lesson.title }}</a></li>
     {% endif %}
     <li>{# I18N: Navigation breadcrumb. #} {{ gettext('Activity') }}</li>
   </ul>
   <div>
     <h1 class="gcb-unit-header">
       {# I18N: Header text for a unit page. #}
-      {{ gettext('Unit %(id)s - %(title)s', id=unit.index, title=unit.title) }}
+      {{ gettext('%(title)s', title=unit.title) }}
     </h1>
   </div>
 
@@ -81,7 +81,7 @@
                   <p style="float:right; margin-top: 0px;">
                     <a role="button" class="gcb-button" id="lessonNotesLink" href="{{ lesson.notes }}" target="_blank">
                       {# I18N: Link to a text version of a lesson video. #}
-                      {{ gettext('Text Version') }}
+                      Slides
                     </a>
                   </p>
                 </div>

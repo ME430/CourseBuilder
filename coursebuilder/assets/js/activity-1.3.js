@@ -30,37 +30,46 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
+                '<b>1.</b> What does MOSFET stand for?',
 
-  '<table border="2"><tr><td><b>Search Tips:</b><p><ul><li>In the previous video, you learned how Google searches the web to find the results of your query. <li>Google looks for the word you typed in, but sometimes also looks for synonyms or related terms. Any words appearing in boldface type in your search results are terms Google associates with your search terms. For example, if you search for [kittens] you might see the word cats in boldface in your results.<li>Ads appear in response to some queries and are always labeled ads. <li>Aside from ads, website owners cannot pay to influence the placement of their website in the search results.</ul><p></tr></td></table><br>',
+                { questionType: 'freetext',
+                  correctAnswerRegex: /metal oxide semiconductor field effect transistor/i,
+                  correctAnswerOutput: 'Correct!  That\'s a mouthful! :).',
+                  incorrectAnswerOutput: 'Looking for Metal Oxide Semiconductor Field Effect Transistor',
+                  outputHeight: '40px'},
 
-  'The next several questions explore what elements impact the order in which Google returns your results. Mark whether each statement is true or false, according to Matt Cutts:<p>',
+                '<br><br><b>2.</b> What are the names of the three legs on a MOSFET?',
 
-  { questionType: 'multiple choice group',
-    questionsList: [{questionHTML: 'Pages that have the words you type in, or synonyms for those words, are listed higher.',
-                     choices: ['True', 'False'], correctIndex: 0},
-                    {questionHTML: 'Pages with font size the same as you type into Google get listed first.',
-                     choices: ['True', 'False'], correctIndex: 1},
-                    {questionHTML: 'Pages where the words you typed in appear in the title or web address get listed higher.',
-                     choices: ['True', 'False'], correctIndex: 0},
-                    {questionHTML: 'Webmasters can get higher ranking in the results by paying Google money.',
-                     choices: ['True', 'False'], correctIndex: 1},
-                    {questionHTML: 'If the words you type in appear near each other on a page, it may get listed higher in your results.',
-                     choices: ['True', 'False'], correctIndex: 1},
-                    {questionHTML: 'Pages which are linked to by lots of other pages--especially other high quality pages--are listed higher.',
-                     choices: ['True', 'False'], correctIndex: 0}],
-    allCorrectOutput: 'Please scroll down for another activity.',
-    someIncorrectOutput: 'Please try again.'},
+                { questionType: 'freetext',
+                  correctAnswerRegex: /(gate source drain)|(gate drain source)|(source gate drain)|(source drain gate)|(drain gate source)|(drain source gate)/i,
+                  correctAnswerOutput: 'Correct!  Gate Drain Source.',
+                  incorrectAnswerOutput: 'Looking for Gate Drain Source',
+                  outputHeight: '40px'},
 
-  '<br><br><br>In the image below, identify the area(s) that are ads.<br><br><img src="assets/img/Image1.5.png" width="785" height="500" usemap="#Image1" border="0"><p>Where are the ads?<p>',
-
-  { questionType: 'multiple choice',
-    choices: [['A', false, 'Your answer is incorrect. Can you identify the two places where there are ads? Please try again.'],
-              ['B', false, 'Your answer is incorrect. Can you identify the two places where there are ads? Please try again.'],
-              ['C', false, 'Your answer is incorrect. Can you identify the two places where there are ads? Please try again.'],
-              ['D', false, 'Your answer is incorrect. Can you identify the two places where there are ads? Please try again.'],
-              ['A and B', false, 'Your answer is incorrect. Can you identify the two places where there are ads? Please try again.'],
-              ['B and C', true, 'Your answer is correct! You have completed this activity.'],
-              ['C and D', false, 'Your answer is incorrect. Can you identify the two places where there are ads? Please try again.']]}
+                  '<br><br><b>3.</b> Assume an N-channel MOSFET for these questions<br>',
+                  
+                  {questionType: 'multiple choice group',
+                	    questionsList: [ 
+                	      {questionHTML: '<b>a.</b> Always connected to ground',
+                	        choices: ['Gate', 'Drain' , 'Source'],
+                	        correctIndex: 2},
+                	      {questionHTML: '<b>b.</b> Connected to the load (ie motor, LED, etc)',
+                	        choices: ['Gate', 'Drain' , 'Source'],
+                	        correctIndex: 1},
+                	      {questionHTML: '<b>c.</b> Connected to the microcontroller',
+                	        choices: ['Gate', 'Drain' , 'Source'],
+                	        correctIndex: 0}
+                	    ],
+                	    allCorrectOutput: 'Well done!',
+                	    someIncorrectOutput: 'Please try again.',
+                	    outputHeight: '50px'
+                	  },
+                              
+                '<br><br><b>4.</b> I like MOSFETs. :) They make my life easy because I just connect it straight to the PIC without sizing a resistor.<br>',
+                  
+                { questionType: 'multiple choice',
+                  choices: [['True', true, 'Correct.  You can even use them in parallel if you need even MORE current.'],
+                            ['False', false, 'Please try again']]},
 
 ];
 

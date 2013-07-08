@@ -30,25 +30,59 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
+    '<b>1.</b> Select the appropriate pin for an L293 (or 754410) H-Bridge chip',
 
-  '<table border="2"><tr><td> <b>Search Tips:</b><p> <ul><li>Use image search when it appears in search results, and use related image search to refine results.<li>Refine results by using different media types like videos and news; these filters appear in the left side of the search results page.<li>Google’s left menu does not appear on tablet computers (iPads, Android tablets).</ul> </tr></td></table><br>',
+    '<div style="text-align:center"><img src="assets/img/hbridgeChip.png"></div>',
+    {questionType: 'multiple choice group',
+	    questionsList: [ 
+	      {questionHTML: '<b>a.</b> Always connected to <b>regulated</b> 5 volts',
+	        choices: ['Pin 16 Vcc1', 'Pin 8 Vcc2'],
+	        correctIndex: 0},
+	      {questionHTML: '<b>b.</b> Connected to the motor\'s power supply rail (often unregulated 5 volts or sometimes higher)',
+	        choices: ['Pin 16 Vcc1', 'Pin 8 Vcc2'],
+	        correctIndex: 1},
+	      {questionHTML: '<b>c.</b> Conencted to the PIC to determine the right side motor direction (right side)',
+	        choices: ['Pins 2 and 7', 'Pins 3 and 6', 'Pins 10 and 15', 'Pins 11 and 14'],
+	        correctIndex: 2},
+	      {questionHTML: '<b>d.</b> Conencted to the motor on the left side',
+		        choices: ['Pins 2 and 7', 'Pins 3 and 6', 'Pins 10 and 15', 'Pins 11 and 14'],
+		        correctIndex: 1},
+	      {questionHTML: '<b>e.</b> Conencted via a resistor to regulated 5 volts to enable the right side motor',
+		        choices: ['Pin 1', 'Pin 9'],
+		        correctIndex: 1},
+	      {questionHTML: '<b>f.</b> Conencted to <b>ground</b> when only using a left side motor (select all that are correct)',
+		        choices: ['Pin 1', 'Pins 4, 5, 12, and 13', 'Pin 8', 'Pin 9', 'Pins 3 and 6'],
+		        correctIndex: [1, 3]}
+	    ],
+	    allCorrectOutput: 'Well done!',
+	    someIncorrectOutput: 'Please try again. Hints: Check your sides.  The last question should have 2 checked.',
+	    outputHeight: '50px'
+	  },
 
-  '<b>1.</b> Your friend was telling you about this new term for a kind of urban protest graffiti called "Yarnbombing". Despite the name, the friend said it is a completely light-hearted, non-violent art form, but you do not understand what it is. <p>What is the most efficient way to find recent News articles about yarnbombing?',
 
-  { questionType: 'multiple choice',
-    choices: [['[yarnbombing news article]', false, 'Try again. This is a risky approach, since many news articles do not call themselves \'news articles\' on the page. Those search terms may make it harder to find good content.'],
-              ['[yarnbombing] then click News in the left menu', true, 'Correct! Using a collection of a specific type of media, like News, can help you get to the best pages faster.'],
-              ['[i would like to find news articles about yarnbombing]', false, 'Try again. We want to avoid including a lot of extra, confusing words into a query.'],
-              ['[what are some recent publications about yarnbombing]', false, 'Try again. Stating what you want in this way, introduces a lot of extra words into a query.']]},
+    '<br><br><b>2.</b> Approximately how much continuous current can you use with an L293 at 5 volts (with a heat sink)?<br>',
+    
+	  { questionType: 'multiple choice',
+	    choices: [['200 mA', false, 'Please try again.'],
+	              ['600 mA', true, 'Correct!  At 5 volts you can do around half an amp.  Even without a heat sink you can do nearly that much on the 754410.'],
+	              ['2 A', false, 'Please try again.'],
+	              ['10 A', false, 'Ummm... No.']]},
 
-  '<br><br><br><b>2.</b> You would like to try yarnbombing, but you need some advice about how to do it well. Unfortunately, when you try following instructions you read online, it never quite works right. You want to see someone doing it, and in some detail--at least a good five minutes of instructions. What media do you use?',
 
-  { questionType: 'freetext',
-    correctAnswerRegex: /video?/i,
-    correctAnswerOutput: 'Correct! Searching in Google Videos is a great way to look across YouTube and other sites with videos. If you look at the links on the left-hand side of the Google Videos Results page, you will see that you can specify how long the video should be.',
-    incorrectAnswerOutput: 'Some people find videos very helpful to see how to carry out tasks. Look at the diferent media offered in the left-hand column. Which one would help you find videos?',
-    showAnswerOutput: 'You can use the Videos collection to search exclusively for videos on a topic without getting other kinds of results.' },
+      '<br><br><b>3.</b> Approximately how much continuous current can you use with an L293 at 12 volts?<br>',
+      
+  	  { questionType: 'multiple choice',
+  	    choices: [['200 mA', true, 'Correct!  At 12 volts they have trouble with even small currents.  If you have big motors don\'t use this chip.'],
+  	              ['600 mA', false, 'Please try again.'],
+  	              ['2 A', false, 'Please try again.'],
+  	              ['10 A', false, 'Ummm... No.']]},
 
-  '<br><br><br><b>3.</b> Now that you’ve read an article or two about yarnbombing, you want to see some pictures of it. Go to Google Images and look up [yarnbombing].',
 
+      '<br><br><b>4.</b> If you <b>don\'t</b> need bi-directional control and would like to use an amp of current, how whould you drive a motor?<br>',
+    
+	  { questionType: 'multiple choice',
+	    choices: [['BJT', false, 'Please try again.  A TIP31 could do it sure, but then you need a large control current.'],
+	              ['L293 H-Bridge', false, 'Please try again.'],
+	              ['MOSFET', true, 'Correct!  MOSFET are awesome!  They only go in one direction though.'],
+	              ['Darlington', false, 'Please try again.']]},
 ];

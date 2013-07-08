@@ -330,7 +330,7 @@ class StudentProfileDAO(object):
         return cls._add_new_profile(user_id, email)
 
     @classmethod
-    def add_new_student_for_current_user(cls, nick_name, additional_fields):
+    def add_new_student_for_current_user(cls, nick_name, rose_username, additional_fields):
         user = users.get_current_user()
 
         student_by_uid = Student.get_student_by_user_id(user.user_id())
@@ -340,12 +340,12 @@ class StudentProfileDAO(object):
             'Student\'s email and user id do not match.')
 
         cls._add_new_student_for_current_user(
-            user.user_id(), user.email(), nick_name, additional_fields)
+            user.user_id(), user.email(), nick_name, rose_username, additional_fields)
 
     @classmethod
     @db.transactional(xg=True)
     def _add_new_student_for_current_user(
-        cls, user_id, email, nick_name, additional_fields):
+        cls, user_id, email, nick_name, rose_username, additional_fields):
         """Create new or re-enroll old student."""
 
         # create profile if does not exist
@@ -365,6 +365,7 @@ class StudentProfileDAO(object):
 
         # update student
         student.user_id = user_id
+        student.rose_username = rose_username
         student.additional_fields = additional_fields
 
         # put both
@@ -414,6 +415,7 @@ class Student(BaseEntity):
     enrolled_on = db.DateTimeProperty(auto_now_add=True, indexed=True)
     user_id = db.StringProperty(indexed=True)
     name = db.StringProperty(indexed=False)
+    rose_username = db.StringProperty(indexed=True)
     additional_fields = db.TextProperty(indexed=False)
     is_enrolled = db.BooleanProperty(indexed=False)
 
@@ -449,9 +451,9 @@ class Student(BaseEntity):
         MemcacheManager.delete(self._memcache_key(self.key().name()))
 
     @classmethod
-    def add_new_student_for_current_user(cls, nick_name, additional_fields):
+    def add_new_student_for_current_user(cls, nick_name, rose_username, additional_fields):
         StudentProfileDAO.add_new_student_for_current_user(
-            nick_name, additional_fields)
+            nick_name, rose_username, additional_fields)
 
     @classmethod
     def get_by_email(cls, email):
