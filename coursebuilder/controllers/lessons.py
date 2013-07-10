@@ -43,6 +43,7 @@ from utils import TRANSIENT_STUDENT
 from utils import XsrfTokenManager
 
 from google.appengine.ext import db
+import logging
 
 COURSE_EVENTS_RECEIVED = PerfCounter(
     'gcb-course-events-received',
@@ -357,6 +358,9 @@ class ActivityHandler(BaseHandler):
                 'unit?unit=%s&lesson=%s' % (
                     unit_id, next_lesson.lesson_id))
 
+
+        #logging.info('Logging works!')
+            
         # Set template values for student progress
         self.template_value['is_progress_recorded'] = (
             CAN_PERSIST_ACTIVITY_EVENTS.value and not student.is_transient)
@@ -368,6 +372,7 @@ class ActivityHandler(BaseHandler):
             # Mark this page as accessed. This is done after setting the
             # student progress template value, so that the mark only shows up
             # after the student visits the page for the first time.
+            #logging.info('Put activity coming... unit_id = ' + str(unit_id) + " Lesson id = " + str(lesson_id) + " student = " + str(student))
             self.get_course().get_progress_tracker().put_activity_accessed(
                 student, unit_id, lesson_id)
 

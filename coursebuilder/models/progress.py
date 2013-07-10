@@ -349,8 +349,15 @@ class UnitLessonCompletionTracker(object):
         """Records that the given student has accessed this activity."""
         # This method currently exists because we need to mark activities
         # without interactive blocks as 'completed' when they are accessed.
-        if not self.get_valid_block_ids(unit_id, lesson_id):
-            self.put_activity_completed(student, unit_id, lesson_id)
+        
+        # Testing by fisherds.  Removed this....
+#        if not self.get_valid_block_ids(unit_id, lesson_id):
+#            self.put_activity_completed(student, unit_id, lesson_id)
+        #Added this...
+        self.put_activity_completed(student, unit_id, lesson_id)
+        
+        #Succefully avoids the error, but gives a check regardless. :(
+
 
     def put_html_accessed(self, student, unit_id, lesson_id):
         """Records that the given student has accessed this lesson page."""

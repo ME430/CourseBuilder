@@ -91,7 +91,7 @@ CAN_PERSIST_ACTIVITY_EVENTS = ConfigProperty(
         'the number of datastore operations and minimizes the use of Google '
         'App Engine quota. Turn event recording on if you want to analyze '
         'this data.'),
-    False)
+    True)
 
 
 # Date format string for displaying datetimes in UTC.
