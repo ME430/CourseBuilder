@@ -350,13 +350,13 @@ class UnitLessonCompletionTracker(object):
         # This method currently exists because we need to mark activities
         # without interactive blocks as 'completed' when they are accessed.
         
-        # Testing by fisherds.  Removed this....
-#        if not self.get_valid_block_ids(unit_id, lesson_id):
-#            self.put_activity_completed(student, unit_id, lesson_id)
-        #Added this...
-        self.put_activity_completed(student, unit_id, lesson_id)
-        
-        #Succefully avoids the error, but gives a check regardless. :(
+        # TODO (fisherds): Figure out how to check if an activity is REALLY complete 
+        # Testing by fisherds to mark an activity as complete instantly.  I removed this....
+        if not self.get_valid_block_ids(unit_id, lesson_id):
+            self.put_activity_completed(student, unit_id, lesson_id)
+        #Then I added this...
+        #self.put_activity_completed(student, unit_id, lesson_id)
+        #Successfully avoids the error, but gives a check for completion regardless of the number of questions answered. :(
 
 
     def put_html_accessed(self, student, unit_id, lesson_id):

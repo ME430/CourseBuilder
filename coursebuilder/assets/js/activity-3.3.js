@@ -74,6 +74,5 @@ var activity = [
 	    ],
 	    allCorrectOutput: 'Well done!',
 	    someIncorrectOutput: 'Please try again. Hints: The last question should have 2 checked.',
-	    outputHeight: '50px'
 	  }
 ];

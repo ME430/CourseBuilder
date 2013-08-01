@@ -56,7 +56,6 @@ var activity = [
 	    ],
 	    allCorrectOutput: 'Well done!',
 	    someIncorrectOutput: 'Please try again. Hints: Check your sides.  The last question should have 2 checked.',
-	    outputHeight: '50px'
 	  },
 
 

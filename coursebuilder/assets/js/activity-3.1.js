@@ -69,6 +69,5 @@ var activity = [
 	    ],
 	    allCorrectOutput: 'Well done!',
 	    someIncorrectOutput: 'Please try again. Hints: All those locations are fine and there is a free area.',
-	    outputHeight: '50px'
 	  }
 ];

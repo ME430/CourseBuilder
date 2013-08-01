@@ -62,7 +62,6 @@ var activity = [
                 	    ],
                 	    allCorrectOutput: 'Well done!',
                 	    someIncorrectOutput: 'Please try again.',
-                	    outputHeight: '50px'
                 	  },
                               
                 '<br><br><b>4.</b> I like MOSFETs. :) They make my life easy because I just connect it straight to the PIC without sizing a resistor.<br>',
