@@ -30,7 +30,7 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-    '<b>1.</b> Select the appropriate pin for an L293 (or 754410) H-Bridge chip',
+    '<b>1.</b> Select the appropriate pins for an L293 (or 754410) H-Bridge chip',
 
     '<div style="text-align:center"><img src="assets/img/hbridgeChip.png"></div>',
     {questionType: 'multiple choice group',
@@ -41,16 +41,16 @@ var activity = [
 	      {questionHTML: '<b>b.</b> Connected to the motor\'s power supply rail (often unregulated 5 volts or sometimes higher)',
 	        choices: ['Pin 16 Vcc1', 'Pin 8 Vcc2'],
 	        correctIndex: 1},
-	      {questionHTML: '<b>c.</b> Conencted to the PIC to determine the right side motor direction (right side)',
+	      {questionHTML: '<b>c.</b> Connected to the PIC to determine the right side motor direction (right side)',
 	        choices: ['Pins 2 and 7', 'Pins 3 and 6', 'Pins 10 and 15', 'Pins 11 and 14'],
 	        correctIndex: 2},
-	      {questionHTML: '<b>d.</b> Conencted to the motor on the left side',
+	      {questionHTML: '<b>d.</b> Connected to the motor on the left side',
 		        choices: ['Pins 2 and 7', 'Pins 3 and 6', 'Pins 10 and 15', 'Pins 11 and 14'],
 		        correctIndex: 1},
-	      {questionHTML: '<b>e.</b> Conencted via a resistor to regulated 5 volts to enable the right side motor',
+	      {questionHTML: '<b>e.</b> Connected via a resistor to regulated 5 volts to enable the right side motor',
 		        choices: ['Pin 1', 'Pin 9'],
 		        correctIndex: 1},
-	      {questionHTML: '<b>f.</b> Conencted to <b>ground</b> when only using a left side motor (select all that are correct)',
+	      {questionHTML: '<b>f.</b> Connected to <b>ground</b> when only using a left side motor (select all that are correct)',
 		        choices: ['Pin 1', 'Pins 4, 5, 12, and 13', 'Pin 8', 'Pin 9', 'Pins 3 and 6'],
 		        correctIndex: [1, 3]}
 	    ],

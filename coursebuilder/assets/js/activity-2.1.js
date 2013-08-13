@@ -43,7 +43,7 @@ var activity = [
                 ['False', false, 'Please try again.']]},
 
 
-    '<br><br><b>3.</b> For small currents you "could" use and LED as a snubber diode.<br>',
+    '<br><br><b>3.</b> For small currents you "could" use an LED as a snubber diode.<br>',
 
     { questionType: 'multiple choice',
       choices: [['True', true, 'Correct!  You "could".  An LED is a diode, but not really a recommended snubber diode.  If the inductive spike was too big it\'d blown the LED. :)'],

@@ -66,7 +66,7 @@ var activity = [
 			choices : [ [ '0x0430', false, 'Please try again.' ],
 					[ '0xCAFE', false, 'Please try again.' ],
 					[ '0xF00D', false, 'Please try again.' ],
-					[ '0xCODE', true, 'Correct!' ] ]
+					[ '0xC0DE', true, 'Correct!' ] ]
 		},
 
 ];

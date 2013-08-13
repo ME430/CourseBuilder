@@ -36,13 +36,13 @@ var activity = [
       choices: [['True', true, 'Correct!  They are pretty simple.'],
                 ['False', false, 'Please try again.']]},
 
-    '<br><br><b>2.</b> The large electrolytic capacitors we use near motors are <b>directional</b> and <b>MUST</b> be connected in a certain direction.<br>',
+    '<br><br><b>2.</b> Although it wasn't covered in the video, my best guess is that the large electrolytic capacitors we use near motors are <b>directional</b> and <b>MUST</b> be connected in a certain direction.<br>',
 
     { questionType: 'multiple choice',
       choices: [['True', true, 'Correct!  They have a negative strip on one side that must go to ground.'],
                 ['False', false, 'Please try again.']]},
 
-    '<br><br><b>3.</b> The small ceramic capacitors we use near the PIC is <b>directional</b> and <b>MUST</b> be connected in a certain direction.<br>',
+    '<br><br><b>3.</b> Although it wasn't covered in the video, my best guess is that the small ceramic capacitors we use near the PIC are <b>directional</b> and <b>MUST</b> be connected in a certain direction.<br>',
 
     { questionType: 'multiple choice',
       choices: [['True', false, 'Please try again.'],

@@ -29,35 +29,34 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-
-		'<b>1.</b> We used binary to set PORTC because it\'s easier to understand here (1 bit for 1 LED).<br>  What prefix told the compiler that 00000011 was a binary number instead of just eleven?<br>',
-
+		'<b>1.</b> Floats are approximations.<br>',
 		{
-			questionType : 'freetext',
-			correctAnswerRegex : /0b/i,
-			correctAnswerOutput : 'Correct the "zero bee" 0b prefix tells the compiler it\'s binary.  We\'ll discuss number systems in depth soon. ;)',
-			incorrectAnswerOutput : 'Please try again.',
-			showAnswerOutput : 'The prefix used on the number was 0b (zero bee).  That made it binary 0b00000011 (value three) vs 00000011 (value eleven).  We\'ll discuss number systems in depth soon. ;)'
+			questionType : 'multiple choice group',
+			questionsList : [
+					{
+						questionHTML : '<b>a.</b> What else might be stored the same as 1.2345?',
+						choices : [ '1.23449999999', '1.23456', '1.23450000001' ],
+						correctIndex : [0,2]
+					},
+					{
+						questionHTML : '<b>b.</b> Would 5.0 == 1.0 + 1.0 + 1.0 + 1.0 + 1.0',
+						choices : [ 'Maybe, might get lucky. :)', 'Yes', 'Never' ],
+						correctIndex : 0
+					}],
+			allCorrectOutput : 'Well done!',
+			someIncorrectOutput : 'Please try again. Hints: ...',
 		},
+		
 
-		'<br><br><b>2.</b> The Templates feature in MPLABx is really handy.  Where is it in the menu?<br>',
+		'<br><br><b>2.</b> In our 8 bit PIC architechture how many bits are used in the sign? exponent? and mantissa of a float?<br>',
+
 
 		{
 			questionType : 'multiple choice',
 			choices : [
-					[ 'Run > Templates', false, 'Please try again. ' ],
-					[ 'Debug > Templates', false, 'Please try again. ' ],
-					[ 'Tools > Templates', true, 'Correct!' ],
-					[ 'Window > Templates', false, 'Please try again. ' ] ]
-		},
-
-		'<br><br><b>3.</b> I like templates.  They save me a TON of boilerplate typing.  <b>Totally</b> worth the one time cost of setting them up.<br>',
-
-		{
-			questionType : 'multiple choice',
-			choices : [
-					['True', true, 'Correct!' ],
-					['False', false, 'Please try again. ' ] ]
+					['1, 16, 15', false, 'Please try again.' ],
+					['1, 8, 23',  true, 'Correct!' ],
+					['1, 16, 47', false, 'Please try again.'] ]
 		},
 
 ];

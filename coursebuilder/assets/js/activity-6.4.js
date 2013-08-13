@@ -29,35 +29,49 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-
-		'<b>1.</b> We used binary to set PORTC because it\'s easier to understand here (1 bit for 1 LED).<br>  What prefix told the compiler that 00000011 was a binary number instead of just eleven?<br>',
-
-		{
-			questionType : 'freetext',
-			correctAnswerRegex : /0b/i,
-			correctAnswerOutput : 'Correct the "zero bee" 0b prefix tells the compiler it\'s binary.  We\'ll discuss number systems in depth soon. ;)',
-			incorrectAnswerOutput : 'Please try again.',
-			showAnswerOutput : 'The prefix used on the number was 0b (zero bee).  That made it binary 0b00000011 (value three) vs 00000011 (value eleven).  We\'ll discuss number systems in depth soon. ;)'
-		},
-
-		'<br><br><b>2.</b> The Templates feature in MPLABx is really handy.  Where is it in the menu?<br>',
+		'<b>1.</b> What is char x = 100 + 100;   printf("x = %d\n", x);<br>',
 
 		{
 			questionType : 'multiple choice',
-			choices : [
-					[ 'Run > Templates', false, 'Please try again. ' ],
-					[ 'Debug > Templates', false, 'Please try again. ' ],
-					[ 'Tools > Templates', true, 'Correct!' ],
-					[ 'Window > Templates', false, 'Please try again. ' ] ]
+			choices : [ [ '200', false, 'Please try again.' ],
+					[ '-56', true, 'Correct!' ],
+					[ '56', false, 'Please try again.' ],
+					[ '44',  false, 'Please try again.'] ]
 		},
 
-		'<br><br><b>3.</b> I like templates.  They save me a TON of boilerplate typing.  <b>Totally</b> worth the one time cost of setting them up.<br>',
+		'<br><br><b>2.</b> What is <b>long x = 100 + 99 / 100 * 100;  printf("x = %d\n", x);</b><br>',
 
 		{
 			questionType : 'multiple choice',
-			choices : [
-					['True', true, 'Correct!' ],
-					['False', false, 'Please try again. ' ] ]
+			choices : [ [ '0', false, 'Please try again.' ],
+					[ '99', false, 'Please try again.' ],
+					[ '100', true, 'Correct!' ],
+					[ '199', false, 'Please try again.' ] ]
 		},
+
+		'<br><br><b>3.</b> Could you fix the problem above (#2) by simply casting something to a long (no order changing)?<br>',
+
+		{
+			questionType : 'multiple choice',
+			choices : [ [ 'Yes.  Just cast the 99 to a long by using 99L', false, 'Please try again.' ],
+					[ 'No.  Casting one value above would fix nothing.', true, 'Correct!' ] ]
+		},
+
+		'<br><br><b>4.</b> Could you fix the problem in #2 like this <b>long x = 100 + 99L * 100 / 100;</b>?<br>',
+
+		{
+			questionType : 'multiple choice',
+			choices : [ [ 'Yes.  Dividing last and casting to a long works.', true, 'Correct!' ],
+					[ 'No.  99L * 100 is too big for a long.', false, 'Please try again.' ] ]
+		},
+
+		'<br><br><b>5.</b> Could you fix the problem in #2 like this <b>long x = 100 + (int) 99 * 100 / 100;</b>?<br>',
+
+		{
+			questionType : 'multiple choice',
+			choices : [ [ 'Yes.  Casting to an int works since 9900 fits into a signed int.', true, 'Correct!' ],
+					[ 'No.  9900 is too big for an int.  You need a long.', false, 'Please try again.' ] ]
+		},
+		
 
 ];

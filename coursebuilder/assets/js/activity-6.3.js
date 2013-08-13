@@ -30,34 +30,52 @@
 
 var activity = [
 
-		'<b>1.</b> We used binary to set PORTC because it\'s easier to understand here (1 bit for 1 LED).<br>  What prefix told the compiler that 00000011 was a binary number instead of just eleven?<br>',
-
+		'<b>1.</b> Array syntax<br>',
 		{
-			questionType : 'freetext',
-			correctAnswerRegex : /0b/i,
-			correctAnswerOutput : 'Correct the "zero bee" 0b prefix tells the compiler it\'s binary.  We\'ll discuss number systems in depth soon. ;)',
-			incorrectAnswerOutput : 'Please try again.',
-			showAnswerOutput : 'The prefix used on the number was 0b (zero bee).  That made it binary 0b00000011 (value three) vs 00000011 (value eleven).  We\'ll discuss number systems in depth soon. ;)'
+			questionType : 'multiple choice group',
+			questionsList : [
+					{
+						questionHTML : '<b>a.</b> Which of these are valid ways to declare a char array of size 5?',
+						choices : [ 'char myArray[5];', 'char myArray[5] = {0,1,2,3,4};', 'char myArray[] = {0,1,2,3,4};', 'char myArray[] = "Dave";' ],
+						correctIndex : [0,1,2,3]
+					},
+					{
+						questionHTML : '<b>b.</b> How would you address the last char in the array above?',
+						choices : [ 'myArray[0]', 'myArray[4]', 'myArray[5]' ],
+						correctIndex : 1
+					}],
+			allCorrectOutput : 'Well done!',
+			someIncorrectOutput : 'Please try again. Hint: All options in part A are valid.',
 		},
 
-		'<br><br><b>2.</b> The Templates feature in MPLABx is really handy.  Where is it in the menu?<br>',
-
-		{
-			questionType : 'multiple choice',
-			choices : [
-					[ 'Run > Templates', false, 'Please try again. ' ],
-					[ 'Debug > Templates', false, 'Please try again. ' ],
-					[ 'Tools > Templates', true, 'Correct!' ],
-					[ 'Window > Templates', false, 'Please try again. ' ] ]
-		},
-
-		'<br><br><b>3.</b> I like templates.  They save me a TON of boilerplate typing.  <b>Totally</b> worth the one time cost of setting them up.<br>',
+		'<br><br><b>2.</b> One example above had <b>char myArray[] = "Dave";</b>.  What is the value of myArray[1]?<br>',
 
 		{
 			questionType : 'multiple choice',
-			choices : [
-					['True', true, 'Correct!' ],
-					['False', false, 'Please try again. ' ] ]
+			choices : [ [ '\'D\'', false, 'Please try again.' ],
+			            [ '\'a\'', true, 'Correct!' ],
+						[ '\'\\0\' the null character', false, 'Please try again.' ],
+					[ 'Array index out of bounds', false, 'Please try again.' ] ]
 		},
+		
+		'<br><br><b>3.</b> Again for <b>char myArray[] = "Dave";</b>.  What is the value of myArray[4]?<br>',
+
+		{
+			questionType : 'multiple choice',
+			choices : [ [ '\'e\'', false, 'Please try again.' ],
+					[ '\'\\0\' the null character', true, 'Correct!' ],
+					[ 'Array index out of bounds', false, 'Please try again.' ] ]
+		},
+		
+		'<br><br><b>4.</b> What is the value of x if <b>char x = \'X\';</b><br>',
+
+		{
+			questionType : 'multiple choice',
+			choices : [ [ '48', false, 'Please try again.'],
+					[ '58', false, 'Please try again.' ],
+					[ '88',  true, 'Correct!' ],
+					[ '120', false, 'Please try again.' ] ]
+		},
+
 
 ];

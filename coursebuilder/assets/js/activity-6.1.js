@@ -30,34 +30,32 @@
 
 var activity = [
 
-		'<b>1.</b> We used binary to set PORTC because it\'s easier to understand here (1 bit for 1 LED).<br>  What prefix told the compiler that 00000011 was a binary number instead of just eleven?<br>',
+		'<b>1.</b> Determine which integer variable types could hold the number.<br>',
+		{
+			questionType : 'multiple choice group',
+			questionsList : [
+					{
+						questionHTML : '<b>a.</b> Check all that could hold <b>50,000</b>',
+						choices : [ 'char', 'unsigned char', 'int', 'unsigned int', 'long', 'unsigned long' ],
+						correctIndex : [3,4,5]
+					},
+					{
+						questionHTML : '<b>b.</b>  Check all that could hold <b>-200</b>',
+						choices : ['char', 'unsigned char', 'int', 'unsigned int', 'long', 'unsigned long' ],
+						correctIndex :  [2,4]
+					} ],
+			allCorrectOutput : 'Well done!',
+			someIncorrectOutput : 'Please try again. Hint: Part a has 3 checks, Part b has 2 checks.',
+		},
+
+
+	    '<br><br><b>2.</b> Declare an integer variable named <b>x</b> that could hold values from 0 to 65535.<br>',
 
 		{
 			questionType : 'freetext',
-			correctAnswerRegex : /0b/i,
-			correctAnswerOutput : 'Correct the "zero bee" 0b prefix tells the compiler it\'s binary.  We\'ll discuss number systems in depth soon. ;)',
+			correctAnswerRegex : /unsigned int x;/i,
+			correctAnswerOutput : 'Correct!',
 			incorrectAnswerOutput : 'Please try again.',
-			showAnswerOutput : 'The prefix used on the number was 0b (zero bee).  That made it binary 0b00000011 (value three) vs 00000011 (value eleven).  We\'ll discuss number systems in depth soon. ;)'
+			showAnswerOutput : 'Here is the answer: unsigned int x;'
 		},
-
-		'<br><br><b>2.</b> The Templates feature in MPLABx is really handy.  Where is it in the menu?<br>',
-
-		{
-			questionType : 'multiple choice',
-			choices : [
-					[ 'Run > Templates', false, 'Please try again. ' ],
-					[ 'Debug > Templates', false, 'Please try again. ' ],
-					[ 'Tools > Templates', true, 'Correct!' ],
-					[ 'Window > Templates', false, 'Please try again. ' ] ]
-		},
-
-		'<br><br><b>3.</b> I like templates.  They save me a TON of boilerplate typing.  <b>Totally</b> worth the one time cost of setting them up.<br>',
-
-		{
-			questionType : 'multiple choice',
-			choices : [
-					['True', true, 'Correct!' ],
-					['False', false, 'Please try again. ' ] ]
-		},
-
 ];

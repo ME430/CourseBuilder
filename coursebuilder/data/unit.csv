@@ -4,3 +4,4 @@ id,type,unit_id,title,release_date,now_available
 3,U,3,Motors,,True
 4,U,4,Intro to MPLABx,,True
 5,U,5,Number systems,,True
+6,U,6,Variable types and operations,,True
