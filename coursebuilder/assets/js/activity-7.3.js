@@ -30,25 +30,52 @@
 
 var activity = [
 
-		'<b>1.</b> Convert <b>0b01100110</b> to decimal<br>',
+		'<b>1.</b> Array syntax<br>',
+		{
+			questionType : 'multiple choice group',
+			questionsList : [
+					{
+						questionHTML : '<b>a.</b> Which of these are valid ways to declare a char array of size 5?',
+						choices : [ 'char myArray[5];', 'char myArray[5] = {0,1,2,3,4};', 'char myArray[] = {0,1,2,3,4};', 'char myArray[] = "Dave";' ],
+						correctIndex : [0,1,2,3]
+					},
+					{
+						questionHTML : '<b>b.</b> How would you address the last char in the array above?',
+						choices : [ 'myArray[0]', 'myArray[4]', 'myArray[5]' ],
+						correctIndex : 1
+					}],
+			allCorrectOutput : 'Well done!',
+			someIncorrectOutput : 'Please try again. Hint: All options in part A are valid.',
+		},
+
+		'<br><br><b>2.</b> One example above had <b>char myArray[] = "Dave";</b>.  What is the value of myArray[1]?<br>',
 
 		{
 			questionType : 'multiple choice',
-			choices : [
-					['100', false, 'Please try again.' ],
-					['101', false, 'Please try again.' ],
-					['102', true, 'Correct!' ],
-					['103', false, 'Please try again.' ] ]
+			choices : [ [ '\'D\'', false, 'Please try again.' ],
+			            [ '\'a\'', true, 'Correct!' ],
+						[ '\'\\0\' the null character', false, 'Please try again.' ],
+					[ 'Array index out of bounds', false, 'Please try again.' ] ]
 		},
-
-	    '<br><br><b>2.</b> Convert <b>36</b> to binary.<br>',
+		
+		'<br><br><b>3.</b> Again for <b>char myArray[] = "Dave";</b>.  What is the value of myArray[4]?<br>',
 
 		{
 			questionType : 'multiple choice',
-			choices : [
-					['0b00100100', true, 'Correct!'],
-					['0b00110110', false, 'Please try again.'],
-					['0b00111111', false, 'Please try again.'],
-					['0b01000000', false, 'Please try again.'] ]
+			choices : [ [ '\'e\'', false, 'Please try again.' ],
+					[ '\'\\0\' the null character', true, 'Correct!' ],
+					[ 'Array index out of bounds', false, 'Please try again.' ] ]
 		},
+		
+		'<br><br><b>4.</b> What is the value of x if <b>char x = \'X\';</b><br>',
+
+		{
+			questionType : 'multiple choice',
+			choices : [ [ '48', false, 'Please try again.'],
+					[ '58', false, 'Please try again.' ],
+					[ '88',  true, 'Correct!' ],
+					[ '120', false, 'Please try again.' ] ]
+		},
+
+
 ];

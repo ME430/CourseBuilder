@@ -29,34 +29,44 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-		'<b>1.</b> Floats are approximations.<br>',
-		{
-			questionType : 'multiple choice group',
-			questionsList : [
-					{
-						questionHTML : '<b>a.</b> What else might be stored the same as 1.2345?',
-						choices : [ '1.23449999999', '1.23456', '1.23450000001' ],
-						correctIndex : [0,2]
-					},
-					{
-						questionHTML : '<b>b.</b> Would 5.0 == 1.0 + 1.0 + 1.0 + 1.0 + 1.0',
-						choices : [ 'Maybe, might get lucky. :)', 'Yes', 'Never' ],
-						correctIndex : 0
-					}],
-			allCorrectOutput : 'Well done!',
-			someIncorrectOutput : 'Please try again. Hints: ...',
-		},
-		
-
-		'<br><br><b>2.</b> In our 8 bit PIC architechture how many bits are used in the sign? exponent? and mantissa of a float?<br>',
-
+		'<b>1.</b> Convert <b>0x2B</b> to decimal<br>',
 
 		{
 			questionType : 'multiple choice',
-			choices : [
-					['1, 16, 15', false, 'Please try again.' ],
-					['1, 8, 23',  true, 'Correct!' ],
-					['1, 16, 47', false, 'Please try again.'] ]
+			choices : [ [ '42', false, 'Please try again.' ],
+					[ '43', true, 'Correct!' ],
+					[ '44', false, 'Please try again.' ],
+					[ '45', false, 'Please try again.' ] ]
+		},
+
+		'<br><br><b>2.</b> Convert <b>36</b> to hexadecimal.<br>',
+
+		{
+			questionType : 'multiple choice',
+			choices : [ [ '0x14',  false, 'Please try again.'],
+					[ '0x24', true, 'Correct!' ],
+					[ '0x34', false, 'Please try again.' ],
+					[ '0x44', false, 'Please try again.' ] ]
+		},
+
+		'<br><br><b>3.</b> Convert <b>0xBEEF</b> to binary.<br>',
+
+		{
+			questionType : 'multiple choice',
+			choices : [ [ '0b1011 1110 1110 1111', true, 'Correct!' ],
+					[ '0b1111 1010 1100 1110', false, 'Please try again.' ],
+					[ '0b1100 1010 1111 1110', false, 'Please try again.' ],
+					[ '0b1101 1110 1010 1101', false, 'Please try again.' ] ]
+		},
+
+		'<br><br><b>4.</b> Convert <b>0b1100 0000 1101 1110</b> to hex.<br>',
+
+		{
+			questionType : 'multiple choice',
+			choices : [ [ '0x0430', false, 'Please try again.' ],
+					[ '0xCAFE', false, 'Please try again.' ],
+					[ '0xF00D', false, 'Please try again.' ],
+					[ '0xC0DE', true, 'Correct!' ] ]
 		},
 
 ];

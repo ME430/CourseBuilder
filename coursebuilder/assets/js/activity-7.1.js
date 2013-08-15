@@ -30,42 +30,32 @@
 
 var activity = [
 
-		'<b>1.</b> Convert <b>0b1110 0110</b> to decimal (as an 8 bit number)<br>',
-
+		'<b>1.</b> Determine which integer variable types could hold the number.<br>',
 		{
-			questionType : 'multiple choice',
-			choices : [ [ '230', false, 'Please try again.  The most significant bit is a 1 so it\'s negative.' ],
-					[ '430', false, 'Please try again.' ],
-					[ '-52', false, 'Please try again.' ],
-					[ '-26', true, 'Correct!' ] ]
+			questionType : 'multiple choice group',
+			questionsList : [
+					{
+						questionHTML : '<b>a.</b> Check all that could hold <b>50,000</b>',
+						choices : [ 'char', 'unsigned char', 'int', 'unsigned int', 'long', 'unsigned long' ],
+						correctIndex : [3,4,5]
+					},
+					{
+						questionHTML : '<b>b.</b>  Check all that could hold <b>-200</b>',
+						choices : ['char', 'unsigned char', 'int', 'unsigned int', 'long', 'unsigned long' ],
+						correctIndex :  [2,4]
+					} ],
+			allCorrectOutput : 'Well done!',
+			someIncorrectOutput : 'Please try again. Hint: Part a has 3 checks, Part b has 2 checks.',
 		},
 
-		'<br><br><b>2.</b> Convert <b>0b1110 0110</b> to decimal (as a 16 bit number)<br>',
+
+	    '<br><br><b>2.</b> Declare an integer variable named <b>x</b> that could hold values from 0 to 65535.<br>',
 
 		{
-			questionType : 'multiple choice',
-			choices : [ [ '230', true, 'Correct!' ],
-					[ '430', false, 'Please try again.' ],
-					[ '-52', false, 'Please try again.' ],
-					[ '-26', false, 'Please try again.  Note this time.  The most significant bit is a 0 so it\'s positive.' ] ]
+			questionType : 'freetext',
+			correctAnswerRegex : /unsigned int x;/i,
+			correctAnswerOutput : 'Correct!',
+			incorrectAnswerOutput : 'Please try again.',
+			showAnswerOutput : 'Here is the answer: unsigned int x;'
 		},
-
-		'<br><br><b>3.</b> Convert <b>-42</b> to binary.<br>',
-
-		{
-			questionType : 'multiple choice',
-			choices : [ [ '0b0010 1010', false, 'Please try again.' ],
-					[ '0b1101 0110', true, 'Correct!' ],
-					[ '0b1011 1111', false, 'Please try again.' ],
-					[ '0b1100 0010', false, 'Please try again.' ] ]
-		},
-
-		'<br><br><b>4.</b> Google doesn\'t do 2\'s complement correctly for negative binary (just uses a - sign, lame!).  However one program CAN to do it right.  Although it uses 10 characters max (which is weird).  Guess which one, then go try this statement <b>=DEC2BIN</b>(-42)<br>',
-
-		{
-			questionType : 'multiple choice',
-			choices : [ [ 'MATLAB', false, 'Please try again.' ],
-					[ 'Excel', true, 'Correct!' ] ]
-		},
-
 ];

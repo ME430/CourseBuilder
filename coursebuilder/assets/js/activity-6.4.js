@@ -29,49 +29,44 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-		'<b>1.</b> What is char x = 100 + 100;   printf("x = %d\n", x);<br>',
+		'<b>1.</b> Convert <b>-42</b> to hex (as an 8 bit number)<br>',
 
 		{
 			questionType : 'multiple choice',
-			choices : [ [ '200', false, 'Please try again.' ],
-					[ '-56', true, 'Correct!' ],
-					[ '56', false, 'Please try again.' ],
-					[ '44',  false, 'Please try again.'] ]
+			choices : [ [ '0xF2', false, 'Please try again.' ],
+					[ '0x2A', false, 'Please try again.' ],
+					[ '0xF7', false, 'Please try again.' ],
+					[ '0xD6', true, 'Correct!' ] ]
 		},
 
-		'<br><br><b>2.</b> What is <b>long x = 100 + 99 / 100 * 100;  printf("x = %d\n", x);</b><br>',
+		'<br><br><b>2.</b> Convert <b>-42</b> to hex (as a 16 bit number)<br>',
 
 		{
 			questionType : 'multiple choice',
-			choices : [ [ '0', false, 'Please try again.' ],
-					[ '99', false, 'Please try again.' ],
-					[ '100', true, 'Correct!' ],
-					[ '199', false, 'Please try again.' ] ]
+			choices : [ [ '0xFFF2', false, 'Please try again.' ],
+					[ '0xFF2A', false, 'Please try again.' ],
+					[ '0xFFF7', false, 'Please try again.' ],
+					[ '0xFFD6', true, 'Correct!' ] ]
 		},
 
-		'<br><br><b>3.</b> Could you fix the problem above (#2) by simply casting something to a long (no order changing)?<br>',
+		'<br><br><b>3.</b> Convert <b>0xF0</b> to decimal (as an 8 bit number)<br>',
 
 		{
 			questionType : 'multiple choice',
-			choices : [ [ 'Yes.  Just cast the 99 to a long by using 99L', false, 'Please try again.' ],
-					[ 'No.  Casting one value above would fix nothing.', true, 'Correct!' ] ]
+			choices : [ [ '240', false, 'Please try again.' ],
+					[ '420', false, 'Please try again.' ],
+					[ '-32', false, 'Please try again.' ],
+					[ '-16', true, 'Correct!' ] ]
 		},
 
-		'<br><br><b>4.</b> Could you fix the problem in #2 like this <b>long x = 100 + 99L * 100 / 100;</b>?<br>',
+		'<br><br><b>4.</b> Type this into Excel.  =HEX2DEC("FFFFFFCAFE") <br>What is the answer?  (again Excel uses 10 \'characters\' which is weird, but that\'s the reason for the extra F\'s)<br>',
 
 		{
 			questionType : 'multiple choice',
-			choices : [ [ 'Yes.  Dividing last and casting to a long works.', true, 'Correct!' ],
-					[ 'No.  99L * 100 is too big for a long.', false, 'Please try again.' ] ]
+			choices : [ [ '-1234', false, 'Please try again.' ],
+					[ '-13570', true, 'Correct!' ],
+					[ '-49184', false, 'Please try again.' ],
+					[ '-1358903', false, 'Please try again.' ] ]
 		},
-
-		'<br><br><b>5.</b> Could you fix the problem in #2 like this <b>long x = 100 + (int) 99 * 100 / 100;</b>?<br>',
-
-		{
-			questionType : 'multiple choice',
-			choices : [ [ 'Yes.  Casting to an int works since 9900 fits into a signed int.', true, 'Correct!' ],
-					[ 'No.  9900 is too big for an int.  You need a long.', false, 'Please try again.' ] ]
-		},
-		
 
 ];

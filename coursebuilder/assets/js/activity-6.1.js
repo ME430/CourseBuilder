@@ -30,32 +30,25 @@
 
 var activity = [
 
-		'<b>1.</b> Determine which integer variable types could hold the number.<br>',
+		'<b>1.</b> Convert <b>0b01100110</b> to decimal<br>',
+
 		{
-			questionType : 'multiple choice group',
-			questionsList : [
-					{
-						questionHTML : '<b>a.</b> Check all that could hold <b>50,000</b>',
-						choices : [ 'char', 'unsigned char', 'int', 'unsigned int', 'long', 'unsigned long' ],
-						correctIndex : [3,4,5]
-					},
-					{
-						questionHTML : '<b>b.</b>  Check all that could hold <b>-200</b>',
-						choices : ['char', 'unsigned char', 'int', 'unsigned int', 'long', 'unsigned long' ],
-						correctIndex :  [2,4]
-					} ],
-			allCorrectOutput : 'Well done!',
-			someIncorrectOutput : 'Please try again. Hint: Part a has 3 checks, Part b has 2 checks.',
+			questionType : 'multiple choice',
+			choices : [
+					['100', false, 'Please try again.' ],
+					['101', false, 'Please try again.' ],
+					['102', true, 'Correct!' ],
+					['103', false, 'Please try again.' ] ]
 		},
 
-
-	    '<br><br><b>2.</b> Declare an integer variable named <b>x</b> that could hold values from 0 to 65535.<br>',
+	    '<br><br><b>2.</b> Convert <b>36</b> to binary.<br>',
 
 		{
-			questionType : 'freetext',
-			correctAnswerRegex : /unsigned int x;/i,
-			correctAnswerOutput : 'Correct!',
-			incorrectAnswerOutput : 'Please try again.',
-			showAnswerOutput : 'Here is the answer: unsigned int x;'
+			questionType : 'multiple choice',
+			choices : [
+					['0b00100100', true, 'Correct!'],
+					['0b00110110', false, 'Please try again.'],
+					['0b00111111', false, 'Please try again.'],
+					['0b01000000', false, 'Please try again.'] ]
 		},
 ];

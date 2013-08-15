@@ -30,52 +30,42 @@
 
 var activity = [
 
-		'<b>1.</b> Array syntax<br>',
-		{
-			questionType : 'multiple choice group',
-			questionsList : [
-					{
-						questionHTML : '<b>a.</b> Which of these are valid ways to declare a char array of size 5?',
-						choices : [ 'char myArray[5];', 'char myArray[5] = {0,1,2,3,4};', 'char myArray[] = {0,1,2,3,4};', 'char myArray[] = "Dave";' ],
-						correctIndex : [0,1,2,3]
-					},
-					{
-						questionHTML : '<b>b.</b> How would you address the last char in the array above?',
-						choices : [ 'myArray[0]', 'myArray[4]', 'myArray[5]' ],
-						correctIndex : 1
-					}],
-			allCorrectOutput : 'Well done!',
-			someIncorrectOutput : 'Please try again. Hint: All options in part A are valid.',
-		},
-
-		'<br><br><b>2.</b> One example above had <b>char myArray[] = "Dave";</b>.  What is the value of myArray[1]?<br>',
+		'<b>1.</b> Convert <b>0b1110 0110</b> to decimal (as an 8 bit number)<br>',
 
 		{
 			questionType : 'multiple choice',
-			choices : [ [ '\'D\'', false, 'Please try again.' ],
-			            [ '\'a\'', true, 'Correct!' ],
-						[ '\'\\0\' the null character', false, 'Please try again.' ],
-					[ 'Array index out of bounds', false, 'Please try again.' ] ]
+			choices : [ [ '230', false, 'Please try again.  The most significant bit is a 1 so it\'s negative.' ],
+					[ '430', false, 'Please try again.' ],
+					[ '-52', false, 'Please try again.' ],
+					[ '-26', true, 'Correct!' ] ]
 		},
-		
-		'<br><br><b>3.</b> Again for <b>char myArray[] = "Dave";</b>.  What is the value of myArray[4]?<br>',
+
+		'<br><br><b>2.</b> Convert <b>0b1110 0110</b> to decimal (as a 16 bit number)<br>',
 
 		{
 			questionType : 'multiple choice',
-			choices : [ [ '\'e\'', false, 'Please try again.' ],
-					[ '\'\\0\' the null character', true, 'Correct!' ],
-					[ 'Array index out of bounds', false, 'Please try again.' ] ]
+			choices : [ [ '230', true, 'Correct!' ],
+					[ '430', false, 'Please try again.' ],
+					[ '-52', false, 'Please try again.' ],
+					[ '-26', false, 'Please try again.  Note this time.  The most significant bit is a 0 so it\'s positive.' ] ]
 		},
-		
-		'<br><br><b>4.</b> What is the value of x if <b>char x = \'X\';</b><br>',
+
+		'<br><br><b>3.</b> Convert <b>-42</b> to binary.<br>',
 
 		{
 			questionType : 'multiple choice',
-			choices : [ [ '48', false, 'Please try again.'],
-					[ '58', false, 'Please try again.' ],
-					[ '88',  true, 'Correct!' ],
-					[ '120', false, 'Please try again.' ] ]
+			choices : [ [ '0b0010 1010', false, 'Please try again.' ],
+					[ '0b1101 0110', true, 'Correct!' ],
+					[ '0b1011 1111', false, 'Please try again.' ],
+					[ '0b1100 0010', false, 'Please try again.' ] ]
 		},
 
+		'<br><br><b>4.</b> Google doesn\'t do 2\'s complement correctly for negative binary (just uses a - sign, lame!).  However one program CAN to do it right.  Although it uses 10 characters max (which is weird).  Guess which one, then go try this statement <b>=DEC2BIN</b>(-42)<br>',
+
+		{
+			questionType : 'multiple choice',
+			choices : [ [ 'MATLAB', false, 'Please try again.' ],
+					[ 'Excel', true, 'Correct!' ] ]
+		},
 
 ];
