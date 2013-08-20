@@ -3,5 +3,6 @@ id,type,unit_id,title,release_date,now_available
 2,U,2,"Snubber diodes, decoupling capacitors, and H-bridge circuits",,True
 3,U,3,Motors,,True
 4,U,4,Intro to MPLABx,,True
-5,U,5,Number systems,,True
-6,U,6,Variable types and operations,,True
+5,U,5,Intro to C,,True
+6,U,6,Number systems,,True
+7,U,7,Variable types and operations,,True
