@@ -34,14 +34,14 @@ var activity = [
         		
         		{
         			questionType : 'freetext',
-        			correctAnswerRegex : /7/i,
+        			correctAnswerRegex : /9/i,
         			correctAnswerOutput : 'Correct!',
         			incorrectAnswerOutput : 'Please try again.'
         		},
 
         		'<br><br><b>2.</b> Write a for statement that increments a variable named <b>x</b> from <b>4</b> to <b>10</b> by <b>2</b>.  Don\'t include 10, just 4, 6, and 8.<br> Assume x is already declared and don\'t worry about curly braces or the inside of the loop.<br>',
         		
-//        		correctAnswerRegex : /for \(x = 4; x < 10; x = x \+ 2\)/i,
+//        		correctAnswerRegex : /for \(x = 2; x < 10; x = x \+ 2\)/i,
         		
         		{
         			questionType : 'freetext',
