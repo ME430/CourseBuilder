@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 // Usage instructions: Create a single array variable named 'activity'. This
 // represents explanatory text and one or more questions to present to the
 // student. Each element in the array should itself be either
@@ -30,28 +29,24 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-    '<b>1.</b> Decoupling capacitors always connect between power and ground.<br>',
+		'<b>1.</b> How long is this delay? (round to the nearest second)<br>',
+		'<img src="assets/img/timer_calculation.png" alt="Timer calculation">',
+		
+		{
+			questionType : 'freetext',
+			correctAnswerRegex : /100/i,
+			correctAnswerOutput : 'Correct!',
+			incorrectAnswerOutput : 'Please try again.',
+			showAnswerOutput : 'Here is the answer: 100 seconds'
+		},
+		
+		'<br><br><b>2.</b> Using the code above how many timer ticks would you need to delay for 81.92 seconds?<br>',
 
-    { questionType: 'multiple choice',
-      choices: [['True', true, 'Correct!  They are pretty simple.'],
-                ['False', false, 'Please try again.']]},
-
-    '<br><br><b>2.</b> Although it wasn\'t covered in the video, my best guess is that the large electrolytic capacitors we use near motors are <b>directional</b> and <b>MUST</b> be connected in a certain direction.<br>',
-
-    { questionType: 'multiple choice',
-      choices: [['True', true, 'Correct!  They have a negative strip on one side that must go to ground.'],
-                ['False', false, 'Please try again.']]},
-
-    '<br><br><b>3.</b> Although it wasn\'t covered in the video, my best guess is that the small ceramic capacitors we use near the PIC are <b>directional</b> and <b>MUST</b> be connected in a certain direction.<br>',
-
-    { questionType: 'multiple choice',
-      choices: [['True', false, 'Please try again.'],
-                ['False', true, 'Correct!  They are reversible and can be connected either way.']]},
-
-    '<br><br><b>4.</b> I\'ve watched Old School and got the Vince Vaughn earmuffs reference.<br>',
-
-    { questionType: 'multiple choice',
-      choices: [['True', true, 'Love that movie.  As you get older you will stop finding movies like that funny so watch them now. :P'],
-                ['False', false, 'You\'re missing out.  Go rent it on Netflix instead of finishing this lecture.  Obviously finish the lecture later. :)']]},
-
+		{
+			questionType : 'freetext',
+			correctAnswerRegex : /10000/i,
+			correctAnswerOutput : 'Correct!',
+			incorrectAnswerOutput : 'Please try again.',
+			showAnswerOutput : 'Here is the answer: 10000 timer ticks'
+		},
 ];

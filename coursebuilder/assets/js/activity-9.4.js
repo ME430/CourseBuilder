@@ -79,7 +79,7 @@ var activity = [
 	{
 		questionType : 'multiple choice',
 		choices : [ [ 'Looks fine to me, although not that random of a value :).', true, 'Correct!' ],
-					[ 'No. You are missing the work void.', false, 'Please try again.' ],
+					[ 'No. You are missing the word void.', false, 'Please try again.' ],
 					[ 'No. The return type is wrong.', false, 'Please try again.' ] ]
 	},
 

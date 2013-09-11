@@ -43,4 +43,5 @@ var activity = [
 			showAnswerOutput : 'Here is the answer'
 		},
 
+		'<img src="assets/img/lcd_code.png" alt="LCD code">',
 ];

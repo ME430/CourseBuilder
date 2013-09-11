@@ -8,3 +8,4 @@ id,type,unit_id,title,release_date,now_available
 7,U,7,Variable types and operations,,True
 8,U,8,Instruction cycles and SFRs,,True
 9,U,9,Functions and debugging,,True
+10,U,10,Timers,,True

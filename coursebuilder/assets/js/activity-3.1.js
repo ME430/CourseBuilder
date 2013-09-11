@@ -60,7 +60,7 @@ var activity = [
 	      {questionHTML: '<b>a.</b> Other good places include (check all that apply)',
 	        choices: ['All Electronics', 'The RobotShop', 'Even SparkFun, Jameco, or DigiKey', 'Wherever you like that you find a motor (ebay, Hobby Partz, etc)'],
 	        correctIndex: [0, 1, 2, 3]},
-	      {questionHTML: '<b>b.</b> Even though it wasn't in the video, you can also check the FREE parts area in C112 for a motor',
+	      {questionHTML: '<b>b.</b> Even though it wasn\'t in the video, you can also check the FREE parts area in C112 for a motor',
 	        choices: ['True, there is a free area in C112', 'False, there is no such area'],
 	        correctIndex: 0},
 	      {questionHTML: '<b>c.</b> You can even get things from the EE Stockroom across the hall!',
