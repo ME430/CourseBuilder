@@ -35,12 +35,12 @@ var activity = [
  
 		{
 			questionType : 'multiple choice',
-			choices : [ [ 'When you set the value to 0 via WriteTimer0(0);.', false, 'Please try again.' ],
+			choices : [ [ 'When you set the timer value to 0 via WriteTimer0(0);', false, 'Please try again.' ],
 			            [ 'Every 1 second.', false, 'Please try again.' ],
-			            [ 'When the timer counts from the largest value (often 65535 to 0) called rollover.', true, 'Correct!' ]]
+			            [ 'When the timer counts from the largest value (often 65535) to 0, called a timer rollover.', true, 'Correct!' ]]
 		},
 
-		'<br><br><b>2.</b> Would you ever call an interrupt service routine, <b>high_isr();</b>, in the code you write?<br>',
+		'<br><br><b>2.</b> Would you ever call an interrupt service routine in the code you write? For example would you call <b>high_isr();</b>?<br>',
 
 		{
 			questionType : 'multiple choice',
@@ -59,7 +59,7 @@ var activity = [
 			showAnswerOutput : 'Looking for INTCONbits.TMR0IF (Interrupt configuration bit for Timer0\'s interrupt flag'
 		},
 		
-		'<br><br><b>4.</b> Timer1 used a different interrupt flag.  What was the Timer1 interrupt flag? (consult your MPLABx code)<br>',
+		'<br><br><b>4.</b> Timer1 uses a different interrupt flag.  What is the Timer1 interrupt flag? (consult your MPLABx code)<br>',
 		 
 		{
 			questionType : 'freetext',

@@ -30,59 +30,60 @@
 
 var activity = [
 
-		'<b>1.</b>Timer library functions.<br>',
+		'<b>1.</b>Push button interrupts are available on which pins?<br>',
 		{
 			questionType : 'multiple choice group',
 			questionsList : [
 					{
-						questionHTML : 'Check all the timer library functions available for the 18F4520',
-						choices : [ 'OpenTimer0', 'OpenTimer1', 'OpenTimer2', 'OpenTimer3', 'OpenTimer4', 'ReadTimer0', 'ReadTimer1', 'WriteTimer0', 'More read and write functions for timers 1, 2, and 3'],
-						correctIndex : [0,1,2,3,5,6,7,8]
+						questionHTML : 'Check all pins that you can use with interrupts',
+						choices : [ 'RA0', 'RA1', 'RA2', 'RA3', 'RB0', 'RB1', 'RB2', 'RB3'],
+						correctIndex : [4,5,6]
 					} ],
-			allCorrectOutput : 'Well done!',
-			someIncorrectOutput : 'Please try again.  All but one should be checked.',
+			allCorrectOutput : 'Well done!  There is also an RB4:RB7 interrupt on change, but we won\'t use it because RB6 and RB7 are shared with the programmer.',
+			someIncorrectOutput : 'Please try again.  Three push button interrupts available.',
 		},
 
-	    '<br><br><b>2.</b> The timer functions are defined by what include?  Fill in this blank #include <________.h><br>',
+	    '<br><br><b>2.</b> The push button interrupt library functions are defined by what include?  Fill in this blank #include <________.h><br>',
 
 		{
 			questionType : 'freetext',
-			correctAnswerRegex : /timers/i,
+			correctAnswerRegex : /portb/i,
 			correctAnswerOutput : 'Correct!',
 			incorrectAnswerOutput : 'Please try again.',
-			showAnswerOutput : 'timers is the answer.  #include <timers.h>'
-		},
-
-	    '<br><br><b>3.</b> What is your favorite MPLABx keyboard shortcut?<br>',
-
-		{
-			questionType : 'multiple choice',
-			choices : [
-					['alt shift f to automatically format (indent)', true, 'Yeah, they are both handy.  Use both' ],
-					['ctrl space to autocomplete the variable/function/SFR you are typing', true, 'Yeah, they are both handy.  Use both' ] ]
+			showAnswerOutput : 'portb is the answer.  #include <portb.h>'
 		},
 		
-	    '<br><br><b>4.</b> What does this function do?   <b>OpenTimer0(TIMER_INT_OFF & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);</b><br>',
+	    '<br><br><b>3.</b> What does this function do?   <b>OpenRB1INT(PORTB_CHANGE_INT_ON & FALLING_EDGE_INT & PORTB_PULLUPS_OFF);</b><br>',
 
 		{
 			questionType : 'multiple choice group',
 			questionsList : [
 					{
 						questionHTML : 'Check all that are true',
-						choices : [ 'Turns Timer0 interrupts off', 'Uses 8 bits for the timer letting it go from 0 to 255', 'Uses 16 bits for the timer letting it go from 0 to 65535', 'Uses an external input as the clock source for the timer', 'Uses the internal instruction cycle frequency as the timer clock source', 'Applies a 256 prescaler so that Timer0 is 1/256th the speed of the instruction cycle frequency.'],
-						correctIndex : [0,2,4,5]
+						choices : [ 'Turns RB1 interrupts on', 'Fires an interrupt event as soon as a push button is released', 'Turns off the internal resistor that could\'ve been used in the basic switch circuit'],
+						correctIndex : [0,2]
 					} ],
 			allCorrectOutput : 'Well done!',
-			someIncorrectOutput : 'Please try again.  Not 8 bits. Not external.  Others are true.',
+			someIncorrectOutput : 'Please try again.  Only 2 are true (think about what FALLING_EDGE means).',
 		},
 
 
-	    '<br><br><b>3.</b> Could use set the SFRs directly and avoid the library functions all together?<br>',
+		'<br><br><b>4.</b> What is the <b>RB1</b> interrupt flag name?<br>Hint <b>SOMETHINGbits.SOMETHING</b> (consult your MPLABx code) <br>',
+ 
+		{
+			questionType : 'freetext',
+			correctAnswerRegex : /INTCON3bits\.INT1IF/i,
+			correctAnswerOutput : 'Correct!',
+			incorrectAnswerOutput : 'Please try again.',
+			showAnswerOutput : 'Looking for INTCON3bits.INT1IF (Interrupt configuration SFR #3, bit for Interrupt 1\'s interrupt flag'
+		},
+		
+	    '<br><br><b>5.</b> Could you set the SFR bits directly and avoid the portb library functions?<br>',
 
 		{
 			questionType : 'multiple choice',
 			choices : [
-					['Yes you could but why?', true, 'Correct!  You won\'t ever choose to though. :) Library functions are handy.' ],
+					['Yes.  And in this case you might.', true, 'Correct!  The library function only sets 2 bits.  You could write those 2 lines of SFR code.' ],
 					['No.  You MUST use the library functions', false, 'You can use the SFRs directly' ] ]
 		},
 				
