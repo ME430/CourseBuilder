@@ -84,7 +84,7 @@ var activity = [
 			questionType : 'multiple choice',
 			choices : [
 					['Yes.  And in this case you might.', true, 'Correct!  The library function only sets 2 bits.  You could write those 2 lines of SFR code.' ],
-					['No.  You MUST use the library functions', false, 'You can use the SFRs directly' ] ]
+					['No.  You MUST use the library functions', false, 'Please try again.  You can use the SFRs directly' ] ]
 		},
 				
 				

@@ -10,3 +10,5 @@ id,type,unit_id,title,release_date,now_available
 9,U,9,Functions and debugging,,True
 10,U,10,Timers,,True
 11,U,11,Interrupts,,True
+12,U,12,Using the ADC,,True
+13,U,13,Light sensors,,True
