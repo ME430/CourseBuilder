@@ -41,7 +41,7 @@ var activity = [
 			            [ '4.96 volts', false, 'Please try again.' ]]
 		},
 
-		'<br><br><b>2.</b> Assume you decided to use a 4.7k resistor for the IR detector circuit.  If you had a on current that would allow up to 4.0 mA, what voltage reading would be present on the signal line to the PIC in IR light? <br>',
+		'<br><br><b>2.</b> Assume you decided to use a 4.7k resistor for the IR detector circuit.  If you had an ON current that would allow up to 4.0 mA, what voltage reading would be present on the signal line in IR light? <br>',
  
 		{
 			questionType : 'multiple choice',

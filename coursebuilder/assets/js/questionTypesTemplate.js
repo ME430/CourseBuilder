@@ -37,11 +37,13 @@ var activity = [
 
 		{
 			questionType : 'freetext',
-			correctAnswerRegex : /current/i,
+			correctAnswerRegex : /Delay10KTCYx\(\s*250\s*\);/i,
 			correctAnswerOutput : 'Correct!',
 			incorrectAnswerOutput : 'Please try again.',
 			showAnswerOutput : 'Here is the answer'
 		},
 
 		'<img src="assets/img/lcd_code.png" alt="LCD code"><br>',
+		
+		'<code style="font-weight: bold; padding: 5px; background: rgb(234, 248, 248); display: inline-block;">if (x == 7) {<br>&nbsp; &nbsp;printf("x is 7\\n");<br>}<br></code>',
 ];
