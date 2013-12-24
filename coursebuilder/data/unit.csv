@@ -2,8 +2,8 @@ id,type,unit_id,title,release_date,now_available
 1,U,1,Introduction to transistors,,True
 2,U,2,"Snubber diodes, decoupling capacitors, and H-bridge circuits",,True
 3,U,3,Motors,,True
-4,U,4,Intro to MPLABx,,True
-5,U,5,Intro to C,,True
+4,U,4,Introduction to MPLABx,,True
+5,U,5,Introduction to C,,True
 6,U,6,Number systems,,True
 7,U,7,Variable types and operations,,True
 8,U,8,Instruction cycles and SFRs,,True
@@ -14,3 +14,4 @@ id,type,unit_id,title,release_date,now_available
 13,U,13,Light sensors,,True
 14,U,14,Pulse Width Modulation,,True
 15,U,15,UART Communication,,True
+16,U,16,Introduction to PLCs and Ladder Logic,,True
