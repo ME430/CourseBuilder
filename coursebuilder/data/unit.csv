@@ -16,3 +16,4 @@ id,type,unit_id,title,release_date,now_available
 15,U,15,UART Communication,,True
 16,U,16,Introduction to PLCs and Ladder Logic,,True
 17,U,17,PicoSoft Markers Timers and Counters,,True
+18,U,18,Finite State Machines for PLCs,,True
