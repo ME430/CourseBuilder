@@ -65,8 +65,8 @@ var activity = [
 			questionType : 'multiple choice',
 			choices : [
 					['33 outputs (DC 0-5 volts) of which 2 could be PWM outputs (exactly like the PIC).', false, 'Please try again.'],
-					['8 outputs that provide 24 vols DC at up to 5 amps.', false, 'Please try again.'],
-					['8 outputs that provide 110 volts AC with very high current capability.', true, 'Correct!'] ]
+					['4 outputs that provide 24 vols DC at up to 5 amps.', false, 'Please try again.'],
+					['4 outputs that provide 110 volts AC with very high current capability.', true, 'Correct!'] ]
 		},
 		
 ];

@@ -82,22 +82,22 @@ var activity = [
 			questionsList : [
 								{
 									questionHTML : 'Rung 1 is equivalent to ...',
-									choices : [ 'Code snipper A', 'Code snipper B', 'Code snipper C', 'Code snipper D' ],
+									choices : [ 'Code snippet A', 'Code snippet B', 'Code snippet C', 'Code snippet D' ],
 									correctIndex : 3
 								},
 								{
 									questionHTML : 'Rung 2 is equivalent to ...',
-									choices : [ 'Code snipper A', 'Code snipper B', 'Code snipper C', 'Code snipper D' ],
+									choices : [ 'Code snippet A', 'Code snippet B', 'Code snippet C', 'Code snippet D' ],
 									correctIndex : 0
 								},
 								{
 									questionHTML : 'Rung 3 is equivalent to ...',
-									choices : [ 'Code snipper A', 'Code snipper B', 'Code snipper C', 'Code snipper D' ],
+									choices : [ 'Code snippet A', 'Code snippet B', 'Code snippet C', 'Code snippet D' ],
 									correctIndex : 1
 								},
 								{
 									questionHTML : 'Rung 4 is equivalent to ...',
-									choices : [ 'Code snipper A', 'Code snipper B', 'Code snipper C', 'Code snipper D' ],
+									choices : [ 'Code snippet A', 'Code snippet B', 'Code snippet C', 'Code snippet D' ],
 									correctIndex : 2
 								}],
 			allCorrectOutput : 'Well done!',

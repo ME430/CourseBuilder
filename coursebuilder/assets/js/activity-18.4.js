@@ -29,46 +29,20 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-        'Helpful reference from the <a href="http://www.rose-hulman.edu/ME430/courseware.html">courseware page</a><br><img width= 90% src="http://www.rose-hulman.edu/class/me/HTML/ME430_Material_2_0/Public/Courseware/OSCCON.png" alt="OSCCON table"><br>',
-		'<b>1.</b> What speed does this code set the <b>clock</b> frequency to?<br>',
-	    '<code style="font-weight: bold; margin: 10px 10px 10px 20px; padding: 5px;	background: rgb(234, 248, 248);	display: inline-block;">OSCCONbits.IRCF2 = 1;<br>OSCCONbits.IRCF1 = 0;<br>OSCCONbits.IRCF0 = 1;<br></code><br>',
+        '<b>1.</b> A Moore machine adds the ability to make the outputs depend on the current state <b>AND</b> the current inputs?<br>',
 
 		{
 			questionType : 'multiple choice',
-			choices : [ [ '8 MHz', false, 'Please try again.' ],
-					[ '4 MHz', false, 'Please try again.' ],
-					[ '2 MHz', true, 'Correct!'  ],
-					[ '1 MHz',  false, 'Please try again.'] ]
+			choices : [ [ 'True', false, 'Please try again.' ],
+					[ 'False', true, 'Correct!  In a Moore machine outputs are based on state only.' ] ]
 		},
 
-		'<br><br><b>2.</b> If you wanted an <b>instruction</b> cycle frequency of 250 kHz, how would you set the 3 OSCCON bits?</b><br>',
+		'<br><br><b>2.</b> In order to make the statement above true what vocab word needed to be used instead of <i>Moore</i>?</b><br>',
 
 		{
-			questionType : 'multiple choice',
-			choices : [ [ '111', false, 'Please try again.' ],
-					[ '100', true, 'Correct!' ],
-					[ '010', false, 'Please try again.' ],
-					[ '000', false, 'Please try again.' ] ]
-		},
-
-		'<br><br><b>3.</b> If you deleted all three OSCCONbits lines and let the default clock frequency run, what would be the <b>instruction</b> cycle frequency?<br>',
-
-		{
-			questionType : 'multiple choice',
-			choices : [ [ '4 MHz', false, 'Please try again.' ],
-					[ '1 MHz',  false, 'Please try again.'],
-					[ '250 kHz', true, 'Correct!' ],
-					[ '31 kHz', false, 'Please try again.' ] ]
-		},
-
-
-		'<br><br><b>4.</b> What is the maximum number of instructions per second that you can get with the internal oscillator?<br>',
-
-		{
-			questionType : 'multiple choice',
-			choices : [ [ '8 million instructions per second', false, 'Please try again.' ],
-					[ '4 million instructions per second',  false, 'Please try again.'],
-					[ '2 million instructions per second', true, 'Correct!' ],
-					[ '1 million instructions per second', false, 'Please try again.' ] ]
+			questionType : 'freetext',
+			correctAnswerRegex : /Mealy/i,
+			correctAnswerOutput : 'Correct!',
+			incorrectAnswerOutput : 'Please try again.'
 		},
 ];

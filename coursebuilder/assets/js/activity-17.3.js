@@ -64,17 +64,17 @@ var activity = [
 		'<br><br><b>4.</b> In addition to the I1 to a C1 Count Pulse relay and I3 to a C1 Counter Reset relay, we\'ll add a I2 to C1 a Count Direction relay.<br>',
 
 		'<img src="assets/img/plc_counter_direction_quiz.png" alt="PLC Counter"><br>',
-		'If the setpoint is <b>1</b> at what letter<b>s</b> does the Counter become Made? (put letters in order to be counted correct)<br>',
+		'If the setpoint is <b>1</b> at what letter<b>s</b> does the Counter become Made? (put letters in order with no spaces or commas, e.g. ABC)<br>',
 		
 		{
 			questionType : 'freetext',
 			correctAnswerRegex : /^ACJO$/i,
 			correctAnswerOutput : 'Correct!',
-			incorrectAnswerOutput : 'Please try again.  Hints: There are four.  Counters don\'t go negative they 0 minus 1 equals 0 in Counter math. ;)'
+			incorrectAnswerOutput : 'Please try again.  Hints: There are four.  Counters don\'t go negative: 0 minus 1 equals 0 in Counter math. ;)'
 		},
 		
 
-		'<br><br><b>5.</b> With a setpoint of 1, at what letters does the Counter become Broken? (put letters in order to be counted correct)<br>',
+		'<br><br><b>5.</b> With a setpoint of 1, at what letters does the Counter become Broken? (put letters in order with no spaces or commas, e.g. ABC)<br>',
 
 		{
 			questionType : 'freetext',

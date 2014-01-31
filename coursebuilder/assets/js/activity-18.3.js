@@ -29,23 +29,12 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
+        		'<b>1.</b> Bionic Commando will be graded in the quiz.  You ready?<br>',
 
-		'<b>1.</b> Assuming that RB0 is setup as an output, what is the line of code that sets the pin RB0 high without effecting the other 7 pins?<br>',
-
-		{
-			questionType : 'freetext',
-			correctAnswerRegex : /PORTBbits.RB0\s*=\s*1;/i,
-			correctAnswerOutput : 'Correct!',
-			incorrectAnswerOutput : 'Please try again.',
-			showAnswerOutput : 'Looking for PORTBbits.RB0 = 1;'
-		},
-		
-		'<br><br><b>2.</b> Is this piece of code valid?  <b>TRISBbits.RB0 = 1;</b><br>',
-
-		{
-			questionType : 'multiple choice',
-			choices : [ [ 'Yes.  Looks good to me.', false, 'Please try again.' ],
-			            [ 'No.  You mean to say TRISBbits.TRISB0 = 1;', true, 'Correct!' ]]
-		},
-		
+        		{
+        			questionType : 'multiple choice',
+        			choices : [
+        					['Yep.  I get it.', true, 'Awesome!  Nice work.' ],
+        					['Not so much', false, 'Don\'t kill yourself trying.  Give it one more shot, then move on with life.' ] ]
+        		},
 ];

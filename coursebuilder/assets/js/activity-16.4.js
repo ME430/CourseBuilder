@@ -85,7 +85,7 @@ var activity = [
 								'Momentary Normally Open',
 								'Position Normally Closed',
 								'Position Normally Open' ],
-						correctIndex : 2
+						correctIndex : 1
 					},
 					{
 						questionHTML : '<b>a.</b> Which columns are position switches?',

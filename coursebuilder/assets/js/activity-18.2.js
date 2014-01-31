@@ -29,51 +29,64 @@
 //    see http://code.google.com/p/course-builder/wiki/CreateActivities.
 
 var activity = [
-		'<b>1.</b> Check the pins that are inputs.<br>',
+
+		'On a sheet a paper draw the FSM for this ladder logic code. Then we\'ll ask you some questions about it.<br>',
+
+		'<img src="assets/img/quiz18_2_ladder_logic.png" alt="Very simple Ladder Logic"><br>',
+
+		'<br><b>1.</b> How many states are there?<br>',
+
 		{
-			questionType : 'multiple choice group',
-			questionsList : [
-					{
-						questionHTML : ' TRISB = 0x1F?',
-						choices : [ 'RB7 is an input','RB6 is an input','RB5 is an input','RB4 is an input','RB3 is an input','RB2 is an input','RB1 is an input','RB0 is an input'],
-						correctIndex : [3,4,5,6,7]
-					}],
-			allCorrectOutput : 'Well done!',
-			someIncorrectOutput : 'Please try again. Hints: 5 checks total',
+			questionType : 'multiple choice',
+			choices : [
+					[ '1 state', false, 'Please try again.' ],
+					[ '2 states', false, 'Please try again.' ],
+					[ '3 states', true, 'Correct!' ],
+					[ '4 states', false, 'Please try again.' ]]
 		},
 		
-
-		'<br><br><b>2.</b> Write the line of code (using hex) needed to set the top two pins of PORTD as inputs and the rest as outputs.<br>',
+		'<br><br><b>2.</b> Into which state did you draw your Reset transition (arrow)?<br>',
 
 		{
-			questionType : 'freetext',
-			correctAnswerRegex : /TRISD\s*=\s*0xC0;/i,
-			correctAnswerOutput : 'Correct!',
-			incorrectAnswerOutput : 'Please try again.',
-			showAnswerOutput : 'Here is the answer: TRISD = 0xC0;'
-		},
-
-		'<br><br><b>3.</b> Assume you are using the green board with TRISC set to all outputs.<br>',
-		{
-			questionType : 'multiple choice group',
-			questionsList : [
-					{
-						questionHTML : ' With the line of code <b>PORTC = 0xA0;</b> which LEDs would be on?',
-						choices : [ 'The RC7 LED would be on','The RC6 LED would be on','The RC5 LED would be on','The RC4 LED would be on','The RC3 LED would be on','The RC2 LED would be on','The RC1 LED would be on','The RC0 LED would be on'],
-						correctIndex : [0,2]
-					}],
-			allCorrectOutput : 'Well done!',
-			someIncorrectOutput : 'Please try again. Hint: 2 checks total.',
+			questionType : 'multiple choice',
+			choices : [
+					[ 'M1 Red', true, 'Correct!' ],
+					[ 'M2 Yellow', false, 'Please try again.' ],
+					[ 'M3 Green', false, 'Please try again.' ] ]
 		},
 		
-
-		'<br><br><b>4.</b> How many digital pins are there on our PIC18F4520 microcontroller (well, how many do we recommend using for normal tasks)?<br>',
+		'<br><br><b>3.</b> Assuming the inputs are all N.O. Momentary and someone pressed I1 then I3 then I2, what state would you be in?<br>',
 
 		{
-			questionType : 'freetext',
-			correctAnswerRegex : /33/i,
-			correctAnswerOutput : 'Correct!',
-			incorrectAnswerOutput : 'Please try again.',
-			showAnswerOutput : 'There are 33 recommended IO pins.  Don\'t plan to use RB6, RB7, or MCLR'
+			questionType : 'multiple choice',
+			choices : [
+					[ 'M1 Red', true, 'Correct!  Red -> Yellow -> Back to Red then I2 does nothing in the red state' ],
+					[ 'M2 Yellow', false, 'Please try again.' ],
+					[ 'M3 Green', false, 'Please try again.' ] ]
+		},
+		
+		'<br><br><b>4.</b> Assuming the inputs are all N.O. Momentary and someone pressed I1 then I2 then I1 then I3 then I1 then I2 then I1, which Q output is on at the end?<br>',
+
+		{
+			questionType : 'multiple choice',
+			choices : [
+					[ 'Q1 the Red Light', false, 'Please try again.' ],
+					[ 'Q2 the Yellow Light', false, 'Please try again.' ],
+					[ 'Q3 the Green Light', true, 'Correct!  Red -> Yellow -> Green (then I1 does nothing) -> Red -> Yellow -> Green (then I1 does nothing)' ] ]
+		},		
+		
+		
+		'<br><br><b>5.</b> How many total arrows are there on your FSM? (Reset counts as 1 transition as well)<br>',
+
+		{
+			questionType : 'multiple choice',
+			choices : [
+					[ '3 transitions', false, 'Please try again.' ],
+					[ '4 transitions', false, 'Please try again.' ],
+					[ '5 transitions', true, 'Correct! Reset, M1-(I1)->M2, M2-(I3)->M1, M2-(I2)->M3, M3-(I3)->M1' ],
+					[ '6 transitions', false, 'Please try again.' ],
+					[ '7 transitions', false, 'Please try again.' ],
+					[ '8 transitions', false, 'Please try again.' ],
+					[ '9 transitions', false, 'Please try again.' ]]
 		},
 ];
